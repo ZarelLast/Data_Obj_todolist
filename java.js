@@ -30,7 +30,9 @@ function render(){
 		}
 		index = index + 1;
 	}
-	if(todos == 0){
+	if(todos <= 0){
+		todos = todos;
+	}else{
 		todos = data;
 	}
 	if(data == null){
