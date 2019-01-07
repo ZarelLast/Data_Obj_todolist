@@ -38,14 +38,14 @@ addDOM.addEventListener('click',function(){
 	todos.push(todo);
 	console.log(todos);
 	nomorDOM.innerHTML = data.length+" To Do";
-	render();
-	hardisk.setItem('todos',JSON.stringify(todos));
 	if(data.length == 0){
 	document.getElementById("starting").style.display = "block";
 	}else{
 	todos = data;
 	document.getElementById("starting").style.display = "none";
 	}
+	hardisk.setItem('todos',JSON.stringify(todos));
+	render();
 });
 
 function berubah(index){
