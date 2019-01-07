@@ -12,7 +12,7 @@ if(todos <= 0){
 }else{
 	todos = data;
 }
-if(data == null){
+if(todos == null){
 	document.getElementById("starting").style.display = "block";
 }else{
 	document.getElementById("starting").style.display = "none";
@@ -54,11 +54,6 @@ addDOM.addEventListener('click',function(){
 	}
 	render();
 });
-if(data == null){
-	document.getElementById("starting").style.display = "block";
-	}else{
-	document.getElementById("starting").style.display = "none";
-	}
 
 function berubah(index){
 	if(todos[index].status == true)
