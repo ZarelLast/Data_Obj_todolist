@@ -1,4 +1,4 @@
-let todos = [];
+let todos = ["coba"];
 const listDOM = document.getElementById('list');
 const inputDOM = document.getElementById('input-todo');
 const addDOM = document.getElementById('add-btn');
@@ -7,13 +7,17 @@ const nomorDOM = document.getElementById('nomor');
 const data = JSON.parse(hardisk.getItem('todos'));
 
 console.log(data);
-
-if(data.length == 0){
-	todos = todos;
+if(data.length <= 0){
+todos = todos;
 }else{
-	todos = data;
+todos = data;
 }
-
+if(data.length == 0){
+	document.getElementById("starting").style.display = "block";
+	}else{
+	todos = data;
+	document.getElementById("starting").style.display = "none";
+	}
 function render(){
 	let index = 0;
 	listDOM.innerHTML = "";
@@ -24,12 +28,12 @@ function render(){
 		}else{
 			listDOM.innerHTML += "<li><div class='posted'><input onchange='berubah("+index+")' type='checkbox' />&nbsp"+todos[index].nama+"</div><button class='btn-del' onclick=hapus("+index+")><span>&times</span></button></li>";
 		}
-		index = index + 1;
-		if(todos.length == 0){
-			document.getElementById("starting").style.display = "block";
+		if(data.length < 0){
+		todos = todos;
 		}else{
-			document.getElementById("starting").style.display = "none";
+		todos = data;
 		}
+		index = index + 1;
 	}
 };
 
@@ -42,7 +46,7 @@ addDOM.addEventListener('click',function(){
 	console.log(todos);
 	hardisk.setItem('todos',JSON.stringify(todos));
 	nomorDOM.innerHTML = todos.length+" To Do";
-	if(data.length == 0){
+	if(todos.length < 0){
 	document.getElementById("starting").style.display = "block";
 	}else{
 	todos = data;
@@ -72,8 +76,8 @@ function hapus(index){
 	}else{
 	todos = data;
 	document.getElementById("starting").style.display = "none";
-	render();
 	}
+	render();
 };
 render();
 nomorDOM.innerHTML += todos.length+" To Do";
