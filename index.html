@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>To Do List Array</title>
+		<link rel=stylesheet href="style.css" text="txt/css"></head>
+	<body>
+	<div id="MyClockDisplay" class="jam"></div><div id="s"></div>
+	<div class="kotak">
+		<div>
+			<div class="judul">
+				<h4 id="nomor"></h4>
+			</div>
+			<div class="text">
+				<div id="kosong" align="center">
+					<div id="starting">
+						<p class="mini-judul"><b>No todos yet</b></p>
+						<a class="mini">add a todo to get started</a>
+					</div>
+					<div id="newtodo">
+						<p onclick="newtodo()"><b>New Todo</b></p>
+					</div>
+				</div>
+				<div>
+					<ul id="list"></ul>
+				</div>
+			</div>
+		</div>
+		<div id="isi">
+			<div>
+				<input id="input-todo" placeholder="New Todo" />
+			</div>
+			<div>
+				<button id="add-btn" type="submit">+</button>
+			</div>
+		</div>
+	</div>
+	
+	<script src="java.js"></script>
+	<script>
+	const newto = document.getElementById("newtodo");
+
+	function newtodo(){
+	newto.style.display = "none";
+	document.getElementById("isi").style.display = "block";
+	};
+	</script>
+	</body>
+</html>

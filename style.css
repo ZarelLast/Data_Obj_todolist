@@ -1,0 +1,123 @@
+body{
+	margin:0;
+	padding:0;
+	background-image:url("http://www.wallpapermaiden.com/image/2018/08/31/anime-night-vending-machines-scenic-clouds-23794.jpeg");
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center;
+	background-attachment:fixed;
+	font-family:'Roboto', Arial;
+}
+ul li{
+	list-style-type:none;
+}
+.posted{
+	width:200px;
+	float:left;
+}
+.text{
+	overflow:auto;
+	max-height:100px;
+	min-height:20px;
+	margin:0px;
+}
+.kotak{
+	color:white;
+	width:280px;
+	height:auto;
+	background-color:rgba(18,18,18,0.8);
+	padding:5px;
+	margin:0px;
+	border-radius:5px;
+	position:absolute;
+	bottom:2%;
+	right:2%;
+	clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 95% 95%, 95% 100%, 90% 95%, 0 95%);
+}
+.btn-del{
+	background:none;
+	color:white;
+	border-radius:50%;
+	height:20px;
+	width:20px;
+	padding:0px 2px 0px 2px;
+	border:none;
+	float:none;
+}
+.btn-del:hover{
+	border:1px solid white;
+}
+#isi{
+	left:10px;
+	position:relative;
+	display:none;
+}
+#nomor{
+	padding:0px;
+	margin:5px;
+	width:auto;
+	float:none;
+}
+#input-todo{
+	background:none;
+	border:none;
+	float:left;
+	border-bottom:2px solid white;
+	color:white;
+	margin-bottom:10px;
+}
+.jam{
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform: translateX(-50%) translateY(-50%);
+	color:#ffffff;
+	font-size:80px;
+	text-shadow: 0 0 20px cyan, 0 0 20px cyan, 0 0 20px blue;
+}
+#s{
+	position:fixed;
+	left:59%;
+	top:53%;
+	transform: translateX(-50%) translateY(-50%);
+	color:#ffffff;
+	font-size:20px;
+}
+#add-btn{
+	background:none;
+	border:none;
+	color:#ffffff;
+}
+input[type=checkbox]{
+	border-radius:50%;
+}
+.mini-judul{
+	font-family:'Roboto';
+	font-size:14px;
+	margin-bottom:2px;
+}
+#area{
+	width:auto;
+	height:100px;
+}
+#newtodo{
+	display:;
+	padding:0px;
+	margin-top:10px;
+	width:105px;
+	height:25px;
+	font-size:14px;
+	background:rgba(100,100,100,0.8);
+	border-radius:20px;
+}
+#newtodo p{
+	position:relative;
+	top:5px;
+}
+#newtodo:hover{
+	background:rgba(120,120,120,0.8);
+}
+.mini{
+	font-size:12px;
+	color:rgba(255,255,255,0.5);
+}
