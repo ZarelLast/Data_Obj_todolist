@@ -30,6 +30,11 @@ function render(){
 		}
 		index = index + 1;
 	}
+	if(data == null || data == 0){
+	document.getElementById("starting").style.display = "block";
+	}else{
+	document.getElementById("starting").style.display = "none";
+	}
 };
 
 addDOM.addEventListener('click',function(){
