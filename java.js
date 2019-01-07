@@ -1,4 +1,4 @@
-let todos = ["coba"];
+let todos = [];
 const listDOM = document.getElementById('list');
 const inputDOM = document.getElementById('input-todo');
 const addDOM = document.getElementById('add-btn');
@@ -7,7 +7,7 @@ const nomorDOM = document.getElementById('nomor');
 const data = JSON.parse(hardisk.getItem('todos'));
 
 console.log(data);
-if(todos.length == 0){
+if(data.length == 0){
 	document.getElementById("starting").style.display = "block";
 	}else{
 	todos = data;
