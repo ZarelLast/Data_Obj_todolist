@@ -1,4 +1,4 @@
-let todos = ["tst"];
+let todos = [];
 const listDOM = document.getElementById('list');
 const inputDOM = document.getElementById('input-todo');
 const addDOM = document.getElementById('add-btn');
@@ -39,6 +39,12 @@ addDOM.addEventListener('click',function(){
 	nomorDOM.innerHTML = data.length+" To Do";
 	render();
 	hardisk.setItem('todos',JSON.stringify(todos));
+	if(data.length == 0){
+	document.getElementById("starting").style.display = "block";
+	}else{
+	todos = data;
+	document.getElementById("starting").style.display = "none";
+	}
 });
 
 function berubah(index){
@@ -58,6 +64,12 @@ function hapus(index){
 	nomorDOM.innerHTML = data.length+" To Do";
 	render();
 	hardisk.setItem('todos',JSON.stringify(todos));
+	if(data.length == 0){
+	document.getElementById("starting").style.display = "block";
+	}else{
+	todos = data;
+	document.getElementById("starting").style.display = "none";
+	}
 };
 render();
 nomorDOM.innerHTML += data.length+" To Do";
