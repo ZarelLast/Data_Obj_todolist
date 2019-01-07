@@ -7,7 +7,7 @@ const nomorDOM = document.getElementById('nomor');
 const data = JSON.parse(hardisk.getItem('todos'));
 
 console.log(data);
-if(data.length == 0){
+if(todos.length == 0){
 	document.getElementById("starting").style.display = "block";
 	}else{
 	todos = data;
