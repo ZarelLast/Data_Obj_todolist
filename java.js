@@ -7,12 +7,17 @@ const nomorDOM = document.getElementById('nomor');
 const data = JSON.parse(hardisk.getItem('todos'));
 
 console.log(data);
+if(data.length == 0){
+	todos = todos;
+}else{
+	todos = data;
+}
 if(data.length == 0 || data == null){
 	document.getElementById("starting").style.display = "block";
-	}else{
-	todos = data;
+}else{
 	document.getElementById("starting").style.display = "none";
-	}
+}
+	
 function render(){
 	let index = 0;
 	listDOM.innerHTML = "";
@@ -22,11 +27,6 @@ function render(){
 			listDOM.innerHTML += "<li><div class='posted'><input onchange='berubah("+index+")' type='checkbox' checked />&nbsp<strike>"+todos[index].nama+"</strike></div><button class='btn-del' onclick=hapus("+index+")><span>&times</span></button></li>";
 		}else{
 			listDOM.innerHTML += "<li><div class='posted'><input onchange='berubah("+index+")' type='checkbox' />&nbsp"+todos[index].nama+"</div><button class='btn-del' onclick=hapus("+index+")><span>&times</span></button></li>";
-		}
-		if(data.length < 0){
-		todos = todos;
-		}else{
-		todos = data;
 		}
 		index = index + 1;
 	}
