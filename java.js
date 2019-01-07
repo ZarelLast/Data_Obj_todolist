@@ -12,7 +12,7 @@ if(todos <= 0){
 }else{
 	todos = data;
 }
-if(todos == null){
+if(data == null){
 	document.getElementById("starting").style.display = "block";
 }else{
 	document.getElementById("starting").style.display = "none";
@@ -29,6 +29,11 @@ function render(){
 			listDOM.innerHTML += "<li><div class='posted'><input onchange='berubah("+index+")' type='checkbox' />&nbsp"+todos[index].nama+"</div><button class='btn-del' onclick=hapus("+index+")><span>&times</span></button></li>";
 		}
 		index = index + 1;
+	}
+	if(todos = 0){
+		todos = todos;
+	}else{
+		todos = data;
 	}
 	if(data == null){
 	document.getElementById("starting").style.display = "block";
