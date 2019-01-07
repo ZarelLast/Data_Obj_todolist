@@ -19,7 +19,7 @@ if(todos <= 0){
 }
 	
 function render(){
-	let index = 1;
+	let index = 0;
 	listDOM.innerHTML = "";
 	while(index<todos.length){
 		console.log(index);
