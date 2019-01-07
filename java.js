@@ -12,7 +12,7 @@ if(data == null){
 }else{
 	todos = data;
 }
-if(data.length <= 0){
+if(data == null){
 	document.getElementById("starting").style.display = "block";
 }else{
 	document.getElementById("starting").style.display = "none";
