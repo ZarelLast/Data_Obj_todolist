@@ -46,7 +46,7 @@ addDOM.addEventListener('click',function(){
 	console.log(todos);
 	hardisk.setItem('todos',JSON.stringify(todos));
 	nomorDOM.innerHTML = todos.length+" To Do";
-	if(todos.length < 0){
+	if(todos.length > 0){
 	document.getElementById("starting").style.display = "block";
 	}else{
 	todos = data;
@@ -71,7 +71,7 @@ function hapus(index){
 	todos.splice(index, 1)
 	nomorDOM.innerHTML = todos.length+" To Do";
 	hardisk.setItem('todos',JSON.stringify(todos));
-	if(data.length == 0){
+	if(data.length > 0){
 	document.getElementById("starting").style.display = "block";
 	}else{
 	todos = data;
