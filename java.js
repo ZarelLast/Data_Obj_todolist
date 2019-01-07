@@ -12,7 +12,7 @@ if(todos <= 0){
 }else{
 	todos = data;
 }
-if(todos <= 0){
+if(data == null){
 	document.getElementById("starting").style.display = "block";
 }else{
 	document.getElementById("starting").style.display = "none";
@@ -30,7 +30,7 @@ function render(){
 		}
 		index = index + 1;
 	}
-	if(todos <= 0){
+	if(data == null){
 	document.getElementById("starting").style.display = "block";
 	}else{
 	document.getElementById("starting").style.display = "none";
