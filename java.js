@@ -7,12 +7,12 @@ const nomorDOM = document.getElementById('nomor');
 const data = JSON.parse(hardisk.getItem('todos'));
 
 console.log(data);
-if(data.length == 0 || data == null){
+if(data.length == 0 || data.length == null){
 	todos = todos;
 }else{
 	todos = data;
 }
-if(data.length == 0 || data == null){
+if(data.length == 0 || data.length == null){
 	document.getElementById("starting").style.display = "block";
 }else{
 	document.getElementById("starting").style.display = "none";
