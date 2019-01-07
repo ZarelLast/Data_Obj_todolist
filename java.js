@@ -10,10 +10,8 @@ console.log(data);
 
 if(data.length == 0){
 	todos = todos;
-	document.getElementById("starting").style.display = "block";
 }else{
 	todos = data;
-	document.getElementById("starting").style.display = "none";
 }
 
 function render(){
@@ -23,10 +21,17 @@ function render(){
 		console.log(index);
 		if(todos[index].status == true){
 			listDOM.innerHTML += "<li><div class='posted'><input onchange='berubah("+index+")' type='checkbox' checked />&nbsp<strike>"+todos[index].nama+"</strike></div><button class='btn-del' onclick=hapus("+index+")><span>&times</span></button></li>";
+			listDOM.style.display="block";
 		}else{
 			listDOM.innerHTML += "<li><div class='posted'><input onchange='berubah("+index+")' type='checkbox' />&nbsp"+todos[index].nama+"</div><button class='btn-del' onclick=hapus("+index+")><span>&times</span></button></li>";
+			listDOM.style.display="block";
 		}
 		index = index + 1;
+		if(todos.length == 0){
+			document.getElementById("starting").style.display = "block";
+		}else{
+			document.getElementById("starting").style.display = "none";
+		}
 	}
 };
 
@@ -37,7 +42,7 @@ addDOM.addEventListener('click',function(){
 	};
 	todos.push(todo);
 	console.log(todos);
-	nomorDOM.innerHTML = data.length+" To Do";
+	nomorDOM.innerHTML = todos.length+" To Do";
 	if(data.length == 0){
 	document.getElementById("starting").style.display = "block";
 	}else{
@@ -55,25 +60,25 @@ function berubah(index){
 	}else{
 		todos[index].status = true
 	}
-	render();
 	hardisk.setItem('todos',JSON.stringify(todos));
+	render();
 }
 
 function hapus(index){
 	console.log(index); 
 	todos.splice(index, 1)
-	nomorDOM.innerHTML = data.length+" To Do";
-	render();
+	nomorDOM.innerHTML = todos.length+" To Do";
 	hardisk.setItem('todos',JSON.stringify(todos));
 	if(data.length == 0){
 	document.getElementById("starting").style.display = "block";
 	}else{
 	todos = data;
 	document.getElementById("starting").style.display = "none";
+	render();
 	}
 };
 render();
-nomorDOM.innerHTML += data.length+" To Do";
+nomorDOM.innerHTML += todos.length+" To Do";
 
 function showTime(){
 	var date = new Date();

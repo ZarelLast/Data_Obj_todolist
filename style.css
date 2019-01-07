@@ -8,6 +8,9 @@ body{
 	background-attachment:fixed;
 	font-family:'Roboto', Arial;
 }
+#list{
+	display:none;
+}
 ul li{
 	list-style-type:none;
 }
