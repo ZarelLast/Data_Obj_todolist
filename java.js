@@ -54,6 +54,11 @@ addDOM.addEventListener('click',function(){
 	}
 	render();
 });
+if(data == null){
+	document.getElementById("starting").style.display = "block";
+	}else{
+	document.getElementById("starting").style.display = "none";
+	}
 
 function berubah(index){
 	if(todos[index].status == true)
