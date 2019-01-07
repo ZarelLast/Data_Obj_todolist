@@ -40,6 +40,7 @@ addDOM.addEventListener('click',function(){
 	};
 	todos.push(todo);
 	console.log(todos);
+	hardisk.setItem('todos',JSON.stringify(todos));
 	nomorDOM.innerHTML = todos.length+" To Do";
 	if(data.length == 0){
 	document.getElementById("starting").style.display = "block";
@@ -47,7 +48,6 @@ addDOM.addEventListener('click',function(){
 	todos = data;
 	document.getElementById("starting").style.display = "none";
 	}
-	hardisk.setItem('todos',JSON.stringify(todos));
 	render();
 });
 
