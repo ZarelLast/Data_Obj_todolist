@@ -20,7 +20,7 @@ if(data == null){
 }
 	
 function render(){
-	let index = 0;
+	let index = 1;
 	listDOM.innerHTML = "";
 	while(index<todos.length){
 		console.log(index);
@@ -44,7 +44,7 @@ addDOM.addEventListener('click',function(){
 	nomorDOM.innerHTML = todos.length+" To Do";
 	if(toogle.style.display == "block"){
 	toogle.style.display = "none";};
-	if(todos = 0){
+	if(todos = 1){
 	todos = data;
 	}
 	render();
