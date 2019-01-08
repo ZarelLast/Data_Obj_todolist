@@ -20,16 +20,16 @@ if(data == null){
 }
 	
 function render(){
-	let index = -1;
+	let index = 0;
 	listDOM.innerHTML = "";
 	while(index<todos.length){
 		console.log(index);
+		index = index + 1;
 		if(todos[index].status == true){
 			listDOM.innerHTML += "<li><div class='posted'><input onchange='berubah("+index+")' type='checkbox' checked />&nbsp<strike>"+todos[index].nama+"</strike></div><button class='btn-del' onclick=hapus("+index+")><span>&times</span></button></li>";
 		}else{
 			listDOM.innerHTML += "<li><div class='posted'><input onchange='berubah("+index+")' type='checkbox' />&nbsp"+todos[index].nama+"</div><button class='btn-del' onclick=hapus("+index+")><span>&times</span></button></li>";
 		}
-		index = index + 1;
 	}
 };
 
