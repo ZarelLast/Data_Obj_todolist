@@ -66,6 +66,7 @@ function hapus(index){
 	if(data.length < 0 && data.length == 0){
 	toogle.style.display = "block";
 	}else{
+	todos = data;
 	toogle.style.display = "none";
 	}
 	render();
