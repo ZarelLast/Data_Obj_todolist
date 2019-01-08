@@ -35,11 +35,6 @@ function render(){
 	}else{
 		todos = data;
 	}
-	if(data == null){
-	document.getElementById("starting").style.display = "block";
-	}else{
-	document.getElementById("starting").style.display = "none";
-	}
 };
 
 addDOM.addEventListener('click',function(){
@@ -51,12 +46,8 @@ addDOM.addEventListener('click',function(){
 	console.log(todos);
 	hardisk.setItem('todos',JSON.stringify(todos));
 	nomorDOM.innerHTML = todos.length+" To Do";
-	if(data==null){
-	document.getElementById("starting").style.display = "block";
-	}else{
-	todos = data;
+	render();
 	document.getElementById("starting").style.display = "none";
-	}
 	render();
 });
 
