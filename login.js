@@ -1,5 +1,4 @@
 const nama = prompt("Masukan username : ")
-if()
 let Wellcome = "";
 const h4 = document.getElementById('subnama');
 
