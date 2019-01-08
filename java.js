@@ -60,7 +60,7 @@ function hapus(index){
 	todos.splice(index, 1)
 	nomorDOM.innerHTML = todos.length+" To Do";
 	hardisk.setItem('todos',JSON.stringify(todos));
-	if(todos.length < 0 && todos.length == 0){
+	if(data.length <= 0){
 	toogle.style.display = "block";
 	}else{
 	toogle.style.display = "none";
