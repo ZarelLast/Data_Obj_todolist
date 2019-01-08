@@ -46,7 +46,8 @@ addDOM.addEventListener('click',function(){
 	console.log(todos);
 	hardisk.setItem('todos',JSON.stringify(todos));
 	nomorDOM.innerHTML = todos.length+" To Do";
-	document.getElementById("starting").style.display = "none";
+	if(document.getElementById("starting").style.display = "block"){
+	document.getElementById("starting").style.display = "none";}
 	render();
 });
 
