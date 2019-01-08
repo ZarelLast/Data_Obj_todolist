@@ -69,7 +69,7 @@ function hapus(index){
 	}else{
 	todos = data;
 	toogle.style.display = "none";
-	}
+	};
 	render();
 };
 render();
