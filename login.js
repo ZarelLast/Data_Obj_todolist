@@ -1,4 +1,9 @@
-const nama = prompt("Masukan username : ")
+let nama = localStorage.getItem('nama')
+if(!nama){
+	nama = prompt("Masukan username : ")
+	localStorage.setItem("nama",nama)
+}
+
 let Wellcome = "";
 const h4 = document.getElementById('subnama');
 
