@@ -8,11 +8,7 @@ const toogle = document.getElementById("starting");
 
 const data = JSON.parse(hardisk.getItem('todos'));
 console.log(data);
-if(todos <= 0){
-	todos = todos;
-}else{
-	todos = data;
-}
+todos = data;
 if(data == null){
 	toogle.style.display = "block";
 }else{
