@@ -73,6 +73,7 @@ function hapus(index){
 };
 render();
 nomorDOM.innerHTML += todos.length+" To Do";
+const data = JSON.parse(hardisk.getItem('todos'));
 
 function showTime(){
 	var date = new Date();
