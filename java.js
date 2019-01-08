@@ -30,11 +30,6 @@ function render(){
 			listDOM.innerHTML += "<li><div class='posted'><input onchange='berubah("+index+")' type='checkbox' />&nbsp"+todos[index].nama+"</div><button class='btn-del' onclick=hapus("+index+")><span>&times</span></button></li>";
 		}
 		index = index + 1;
-		if(todos <= 0){
-	todos = todos;
-}else{
-	todos = data;
-}
 	}
 };
 
@@ -73,11 +68,6 @@ function hapus(index){
 	}else{
 	todos = data;
 	toogle.style.display = "none";
-	}
-	if(todos <= 0){
-	todos = todos;
-	}else{
-	todos = data;
 	}
 	render();
 };
