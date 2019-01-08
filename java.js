@@ -61,9 +61,9 @@ function berubah(index){
 function hapus(index){
 	console.log(index); 
 	todos.splice(index, 1)
-	nomorDOM.innerHTML = data.length+" To Do";
+	nomorDOM.innerHTML = todos.length+" To Do";
 	hardisk.setItem('todos',JSON.stringify(todos));
-	if(data.length < 0 && data.length == 0){
+	if(todos.length < 0 && todos.length == 0){
 	toogle.style.display = "block";
 	}else{
 	todos = data;
@@ -72,7 +72,7 @@ function hapus(index){
 	render();
 };
 render();
-nomorDOM.innerHTML += data.length+" To Do";
+nomorDOM.innerHTML += todos.length+" To Do";
 
 function showTime(){
 	var date = new Date();
