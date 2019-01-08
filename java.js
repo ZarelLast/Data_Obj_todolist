@@ -66,14 +66,12 @@ function hapus(index){
 	if(data.length < 0){
 	toogle.style.display = "block";
 	}else{
-	todos = data;
 	toogle.style.display = "none";
 	}
 	render();
 };
 render();
 nomorDOM.innerHTML += todos.length+" To Do";
-const data = JSON.parse(hardisk.getItem('todos'));
 
 function showTime(){
 	var date = new Date();
