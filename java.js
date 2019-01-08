@@ -31,11 +31,6 @@ function render(){
 		}
 		index = index + 1;
 	}
-	if(todos <= 0){
-		todos = todos;
-	}else{
-		todos = data;
-	}
 };
 
 addDOM.addEventListener('click',function(){
@@ -47,6 +42,8 @@ addDOM.addEventListener('click',function(){
 	console.log(todos);
 	hardisk.setItem('todos',JSON.stringify(todos));
 	nomorDOM.innerHTML = todos.length+" To Do";
+	if(toogle.style.display == "block"){
+	toogle.style.display = "none";};
 	render();
 });
 
