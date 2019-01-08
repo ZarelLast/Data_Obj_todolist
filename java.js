@@ -20,7 +20,7 @@ if(data == null){
 }
 	
 function render(){
-	let index = 1;
+	let index = -1;
 	listDOM.innerHTML = "";
 	while(index<todos.length){
 		console.log(index);
