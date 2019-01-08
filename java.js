@@ -8,7 +8,7 @@ const toogle = document.getElementById("starting");
 
 const data = JSON.parse(hardisk.getItem('todos'));
 console.log(data);
-if(data==null||data==undefined||data==0)
+if(data==null||data==undefined)
 {data == 0};
 todos = data;
 if(data == null){
