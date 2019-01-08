@@ -1,4 +1,4 @@
-const namaanda = document.getElementById("namaAnda");
+const namaanda = document.getElementById('namaAnda');
 
 const nama = prompt("Masukan Username : ");
 if(nama = "Zarel"){
