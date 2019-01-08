@@ -1,10 +1,11 @@
-let todos = [""];
+let todos = [];
 const listDOM = document.getElementById('list');
 const inputDOM = document.getElementById('input-todo');
 const addDOM = document.getElementById('add-btn');
 const hardisk = window.localStorage;
 const nomorDOM = document.getElementById('nomor');
 const data = JSON.parse(hardisk.getItem('todos'));
+const toogle = document.getElementById("starting");
 
 console.log(data);
 if(todos <= 0){
@@ -13,9 +14,9 @@ if(todos <= 0){
 	todos = data;
 }
 if(data == null){
-	document.getElementById("starting").style.display = "block";
+	toogle.style.display = "block";
 }else{
-	document.getElementById("starting").style.display = "none";
+	toogle.style.display = "none";
 }
 	
 function render(){
@@ -46,8 +47,8 @@ addDOM.addEventListener('click',function(){
 	console.log(todos);
 	hardisk.setItem('todos',JSON.stringify(todos));
 	nomorDOM.innerHTML = todos.length+" To Do";
-	if(document.getElementById("starting").style.display == "block"){
-	document.getElementById("starting").style.display = "none";}
+	if(toogle.style.display == "block"){
+	toogle.style.display = "none";}
 	render();
 });
 
@@ -68,10 +69,10 @@ function hapus(index){
 	nomorDOM.innerHTML = todos.length+" To Do";
 	hardisk.setItem('todos',JSON.stringify(todos));
 	if(data.length <= 0){
-	document.getElementById("starting").style.display = "block";
+	toogle.style.display = "block";
 	}else{
 	todos = data;
-	document.getElementById("starting").style.display = "none";
+	toogle.style.display = "none";
 	}
 	render();
 };
