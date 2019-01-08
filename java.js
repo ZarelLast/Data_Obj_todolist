@@ -44,6 +44,9 @@ addDOM.addEventListener('click',function(){
 	nomorDOM.innerHTML = todos.length+" To Do";
 	if(toogle.style.display == "block"){
 	toogle.style.display = "none";};
+	if(todos = 0){
+	todos = data;
+	}
 	render();
 });
 
@@ -68,6 +71,11 @@ function hapus(index){
 	}else{
 	todos = data;
 	toogle.style.display = "none";
+	}
+	if(todos <= 0){
+	todos = todos;
+	}else{
+	todos = data;
 	}
 	render();
 };
