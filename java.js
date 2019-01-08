@@ -30,6 +30,11 @@ function render(){
 			listDOM.innerHTML += "<li><div class='posted'><input onchange='berubah("+index+")' type='checkbox' />&nbsp"+todos[index].nama+"</div><button class='btn-del' onclick=hapus("+index+")><span>&times</span></button></li>";
 		}
 		index = index + 1;
+		if(todos <= 0){
+	todos = todos;
+}else{
+	todos = data;
+}
 	}
 };
 
@@ -44,11 +49,10 @@ addDOM.addEventListener('click',function(){
 	nomorDOM.innerHTML = todos.length+" To Do";
 	if(toogle.style.display == "block"){
 	toogle.style.display = "none";};
-	const data = JSON.parse(hardisk.getItem('todos'));
+	render();
 	if(todos = 0){
 	todos = data;
 	}
-	render();
 });
 
 function berubah(index){
