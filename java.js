@@ -45,11 +45,6 @@ addDOM.addEventListener('click',function(){
 	if(toogle.style.display == "block"){
 	toogle.style.display = "none";};
 	render();
-	if(todos <= 0){
-	todos = todos;
-}else{
-	todos = data;
-}
 });
 
 function berubah(index){
