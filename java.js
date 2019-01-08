@@ -44,7 +44,6 @@ addDOM.addEventListener('click',function(){
 	nomorDOM.innerHTML = todos.length+" To Do";
 	if(toogle.style.display == "block"){
 	toogle.style.display = "none";};
-	todos=data;
 	render();
 });
 
@@ -54,7 +53,7 @@ function berubah(index){
 		todos[index].status = false
 	}else{
 		todos[index].status = true
-	}
+	};
 	hardisk.setItem('todos',JSON.stringify(todos));
 	render();
 }
