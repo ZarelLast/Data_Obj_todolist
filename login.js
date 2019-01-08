@@ -4,6 +4,6 @@ const nama = prompt("Masukan Username : ");
 		user.innerHTML = user.innerHTML "Hallo" + username;
 	}else{
 		user.innerHTML =user.innerHTML "oops" + username;
-	}
+	};
 	
 
