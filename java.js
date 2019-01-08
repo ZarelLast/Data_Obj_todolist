@@ -44,7 +44,7 @@ addDOM.addEventListener('click',function(){
 	nomorDOM.innerHTML = todos.length+" To Do";
 	if(toogle.style.display == "block"){
 	toogle.style.display = "none";};
-	if(todos = 1){
+	if(todos = 0){
 	todos = data;
 	}
 	render();
