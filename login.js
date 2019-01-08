@@ -1,5 +1,7 @@
-const nama = prompt("Masukan Username : ");
+var h4 = document.getElementById("namaAnda")
+
+var nama = prompt("Masukan Username : ")
 if(nama == "Zarel"){
 	alert("hallo nigga");
-	document.getElementById("namaAnda").innerHTML = nama;
+	h4.innerHTML = nama;
 }
