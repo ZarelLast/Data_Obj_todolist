@@ -8,7 +8,11 @@ const toogle = document.getElementById("starting");
 
 const data = JSON.parse(hardisk.getItem('todos'));
 console.log(data);
+if(todos <= 0){
+	todos = todos;
+}else{
 	todos = data;
+}
 if(data == null){
 	toogle.style.display = "block";
 }else{
@@ -41,6 +45,11 @@ addDOM.addEventListener('click',function(){
 	if(toogle.style.display == "block"){
 	toogle.style.display = "none";};
 	render();
+	if(todos <= 0){
+	todos = todos;
+}else{
+	todos = data;
+}
 });
 
 function berubah(index){
