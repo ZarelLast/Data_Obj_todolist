@@ -9,12 +9,19 @@ const toogle = document.getElementById("starting");
 const data = JSON.parse(hardisk.getItem('todos'));
 console.log(data);
 
-if(data == null || data.lenght == 0){
-	toogle.style.display = "block";
-}else{
+if(data != null){
+	todos = data;
 	toogle.style.display = "none";
-todos = data;
+	if(data==0){
+		toogle.style.display = "block";
 	}
+}else{
+	toogle.style.display = "block";
+	if(data!=null){
+		toogle.style.display = "none";
+		todos = data;
+	}
+}
 	
 function render(){
 	let index = 0;
