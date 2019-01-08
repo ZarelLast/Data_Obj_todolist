@@ -9,7 +9,7 @@ const toogle = document.getElementById("starting");
 const data = JSON.parse(hardisk.getItem('todos'));
 console.log(data);
 
-if(data == null){
+if(data == null || data.lenght == 0){
 	toogle.style.display = "block";
 }else{
 	toogle.style.display = "none";
@@ -69,29 +69,3 @@ function hapus(index){
 };
 render();
 nomorDOM.innerHTML += todos.length+" To Do";
-
-function showTime(){
-	var date = new Date();
-	var h = date.getHours();
-	var m = date.getMinutes();
-	
-	var session =" AM";
-	if(h==0){
-		h=12;
-	}
-	if(h>12){
-		h=h-12;
-		session = " PM";
-	}
-	h = (h<10)? "0" + h :h;
-	m = (m<10)? "0" + m :m;
-	var time = h + ":" + m;
-	var pm = session;
-	document.getElementById("s").innerText = pm;
-	document.getElementById("s").textContent = pm;
-	document.getElementById("MyClockDisplay").innerText = time;
-	document.getElementById("MyClockDisplay").textContent = time;
-	setTimeout(showTime, 1000);
-	};	
-
-showTime();
