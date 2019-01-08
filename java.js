@@ -4,9 +4,9 @@ const inputDOM = document.getElementById('input-todo');
 const addDOM = document.getElementById('add-btn');
 const hardisk = window.localStorage;
 const nomorDOM = document.getElementById('nomor');
-const data = JSON.parse(hardisk.getItem('todos'));
 const toogle = document.getElementById("starting");
 
+const data = JSON.parse(hardisk.getItem('todos'));
 console.log(data);
 if(todos <= 0){
 	todos = todos;
@@ -44,6 +44,7 @@ addDOM.addEventListener('click',function(){
 	nomorDOM.innerHTML = todos.length+" To Do";
 	if(toogle.style.display == "block"){
 	toogle.style.display = "none";};
+	const data = JSON.parse(hardisk.getItem('todos'));
 	if(todos = 0){
 	todos = data;
 	}
